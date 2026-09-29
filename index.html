@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verma Electronics Store - Your trusted electronics shop in Biswan, Sitapur, UP. TVs, ACs, Refrigerators, Washing Machines, Solar Panels & more. Pay via UPI!">
+    <meta name="keywords" content="Verma Electronics, Electronics Store Biswan, Sitapur Electronics, TV AC Refrigerator Shop Sitapur, UPI Payment">
+    <title>Verma Electronics Store | Biswan, Sitapur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #0f2544;
+            color: #fff;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .top-bar a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .top-bar .contact-quick {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: #ffd700;
+            font-size: 1.8rem;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(30,60,114,0.85), rgba(42,82,152,0.85)),
+                        url('https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,215,0,0.4);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+        }
+
+        .btn-call {
+            background: #fff;
+            color: #1e3c72;
+        }
+
+        .btn-upi {
+            background: #6739b7;
+            color: #fff;
+        }
+
+        .btn-upi:hover {
+            box-shadow: 0 8px 20px rgba(103,57,183,0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1e3c72;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0 0.5rem;
+            color: #1e3c72;
+        }
+
+        .product-card p {
+            padding: 0 1rem;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .card-buttons {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .product-card .card-buttons a {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .product-card .card-buttons a:hover {
+            transform: translateY(-2px);
+        }
+
+        .mini-wa {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .mini-pay {
+            background: #6739b7;
+            color: #fff;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature {
+            background: #fff;
+            padding: 2rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2a5298;
+        }
+
+        .feature h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #ffd700;
+        }
+
+        .service-item h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-item h3 i {
+            color: #2a5298;
+        }
+
+        /* ===== UPI PAYMENT SECTION ===== */
+        .upi-section {
+            background: linear-gradient(135deg, #6739b7, #8e44ad);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(103,57,183,0.3);
+        }
+
+        .upi-section h2 {
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .upi-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .upi-card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.25);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 550px;
+            margin: 0 auto 2rem;
+        }
+
+        .upi-id-display {
+            background: #fff;
+            color: #1e3c72;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            display: inline-block;
+            border: 3px dashed #6739b7;
+            word-break: break-all;
+        }
+
+        .upi-id-display small {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0;
+            color: #666;
+            font-weight: normal;
+            margin-top: 0.3rem;
+        }
+
+        .upi-copy-btn {
+            background: #ffd700;
+            color: #1e3c72;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.3s, background 0.3s;
+            margin-left: 0.5rem;
+        }
+
+        .upi-copy-btn:hover {
+            background: #fff;
+            transform: translateY(-2px);
+        }
+
+        .upi-apps {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0 1rem;
+        }
+
+        .upi-app {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 100px;
+            text-decoration: none;
+            color: #1e3c72;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .upi-app:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .upi-app i {
+            font-size: 1.8rem;
+        }
+
+        .upi-app.gpay i { color: #4285F4; }
+        .upi-app.phonepe i { color: #5f259f; }
+        .upi-app.paytm i { color: #00baf2; }
+        .upi-app.bhim i { color: #ff6600; }
+        .upi-app.any i { color: #6739b7; }
+
+        .upi-note {
+            background: rgba(255,255,255,0.15);
+            border-left: 4px solid #ffd700;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .upi-note strong {
+            color: #ffd700;
+        }
+
+        /* ===== Payment Modal ===== */
+        .payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .payment-modal.active {
+            display: flex;
+        }
+
+        .payment-modal-content {
+            background: #fff;
+            border-radius: 16px;
+            max-width: 450px;
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .payment-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .payment-modal-close:hover {
+            color: #333;
+        }
+
+        .payment-modal-content h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-modal-content .amount-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: bold;
+            transition: border-color 0.3s;
+        }
+
+        .payment-modal-content .amount-input:focus {
+            outline: none;
+            border-color: #6739b7;
+        }
+
+        .qr-container {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 2px solid #eee;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .qr-container img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+
+        .payment-modal-content .upi-id-small {
+            background: #f4f7fa;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1e3c72;
+            letter-spacing: 1px;
+            margin: 0.5rem 0;
+            word-break: break-all;
+        }
+
+        .payment-modal-content .pay-btn-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .payment-modal-content .pay-btn-row a,
+        .payment-modal-content .pay-btn-row button {
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .pay-open-app {
+            background: #6739b7;
+            color: #fff;
+        }
+
+        .pay-copy {
+            background: #f4f7fa;
+            color: #1e3c72;
+        }
+
+        .pay-copy:hover {
+            background: #e0e8f0;
+        }
+
+        .payment-modal-content .pay-btn-row a:hover,
+        .payment-modal-content .pay-btn-row button:hover {
+            transform: translateY(-2px);
+        }
+
+        .payment-footer-note {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Contact */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact-info-box {
+            background: #1e3c72;
+            color: #fff;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+        }
+
+        .contact-info-box h2 {
+            color: #ffd700;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-top: 0.3rem;
+            min-width: 25px;
+        }
+
+        .info-item strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #ffd700;
+        }
+
+        .info-item a {
+            color: #fff;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .info-item a:hover {
+            color: #ffd700;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .map-box {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: 100%;
+            min-height: 450px;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            min-height: 450px;
+        }
+
+        /* Enquiry Form */
+        .enquiry-form {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .enquiry-form .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .enquiry-form label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+
+        .enquiry-form input,
+        .enquiry-form select,
+        .enquiry-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .enquiry-form input:focus,
+        .enquiry-form select:focus,
+        .enquiry-form textarea:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+
+        .enquiry-form button {
+            width: 100%;
+            padding: 0.9rem;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .enquiry-form button:hover {
+            background: #1ebe5d;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            color: #1e3c72;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #f0f4fa;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.2rem;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        /* Floating WhatsApp */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.5);
+            z-index: 999;
+            animation: pulse 2s infinite;
+            transition: transform 0.3s;
+        }
+
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+            70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        /* Floating Call */
+        .float-call {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background: #2a5298;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(42,82,152,0.5);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .float-call:hover {
+            transform: scale(1.1);
+        }
+
+        /* Floating UPI */
+        .float-upi {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            background: #6739b7;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(103,57,183,0.5);
+            z-index: 999;
+            transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .float-upi:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f2544;
+            color: #ccc;
+            padding: 2.5rem 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: #ffd700;
+        }
+
+        .footer-col .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .footer-col .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        .footer-col .social-links a:hover {
+            background: #ffd700;
+            color: #0f2544;
+        }
+
+        .footer-upi {
+            background: rgba(103,57,183,0.2);
+            border: 1px solid rgba(103,57,183,0.5);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+            display: inline-block;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .footer-upi:hover {
+            background: rgba(103,57,183,0.4);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom span {
+            color: #ffd700;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e3c72;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 3000;
+            font-weight: 600;
+            opacity: 0;
+            transition: transform 0.4s, opacity 0.4s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .toast i {
+            color: #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .top-bar {
+                justify-content: center;
+                text-align: center;
+                font-size: 0.8rem;
+            }
+            header {
+                flex-wrap: wrap;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            nav.active {
+                max-height: 400px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding-top: 1rem;
+            }
+            nav ul li {
+                padding: 0.7rem 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .map-box {
+                min-height: 300px;
+            }
+            .map-box iframe {
+                min-height: 300px;
+            }
+            .float-call,
+            .float-whatsapp,
+            .float-upi {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            .float-upi {
+                bottom: 85px;
+            }
+            .upi-id-display {
+                font-size: 1.3rem;
+                padding: 0.8rem 1rem;
+            }
+            .upi-copy-btn {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                display: block;
+                width: 100%;
+            }
+            .upi-apps {
+                gap: 0.8rem;
+            }
+            .upi-app {
+                min-width: 80px;
+                padding: 0.8rem;
+                font-size: 0.75rem;
+            }
+            .upi-app i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div><i class="fas fa-map-marker-alt"></i> Dharampur, Post Maharaj Nagar, Biswan, Sitapur, UP - 261201</div>
+        <div class="contact-quick">
+            <span><i class="fas fa-phone"></i> <a href="tel:+919795916848">+91 97959 16848</a></span>
+            <span><i class="fas fa-clock"></i> Mon–Sun: 9:00 AM – 9:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-tv"></i>
+            Verma <span>Electronics</span>
+        </div>
+        <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#payment">Pay Online</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Verma Electronics Store</h1>
+        <p>Your trusted electronics shop in Biswan, Sitapur — quality appliances, genuine brands, and honest prices since 1995.</p>
+        <div class="hero-buttons">
+            <a href="tel:+919795916848" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/919795916848?text=Hello%20Verma%20Electronics%2C%20I%20want%20to%20enquire%20about%20a%20product." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <button onclick="openPaymentModal()" class="btn btn-upi"><i class="fas fa-qrcode"></i> Pay via UPI</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <p class="section-subtitle">Genuine electronics & home appliances at the best prices</p>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80" alt="Televisions">
+                <h3>Televisions</h3>
+                <p>LED, Smart TV & 4K Ultra HD from Samsung, LG, Sony & more.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Televisions" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80" alt="Refrigerators">
+                <h3>Refrigerators</h3>
+                <p>Single & double door fridges — energy-efficient & budget-friendly.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Refrigerators" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80" alt="Air Conditioners">
+                <h3>Air Conditioners</h3>
+                <p>Split & window ACs with inverter technology for maximum comfort.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Air%20Conditioners" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=600&q=80" alt="Washing Machines">
+                <h3>Washing Machines</h3>
+                <p>Front load, top load & semi-automatic from trusted brands.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Washing%20Machines" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=600&q=80" alt="Fans and Coolers">
+                <h3>Fans & Coolers</h3>
+                <p>Ceiling fans, table fans, air coolers & exhaust fans.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Fans%20and%20Coolers" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Solar Panels">
+                <h3>Solar Panels</h3>
+                <p>Wholesale solar panels & inverters for homes and businesses.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Solar%20Panels" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Inverters and Batteries">
+                <h3>Inverters & Batteries</h3>
+                <p>Power backup solutions for uninterrupted electricity.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Inverters%20and%20Batteries" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=600&q=80" alt="Small Appliances">
+                <h3>Small Appliances</h3>
+                <p>Mixers, irons, kettles, heaters & everyday home essentials.</p>
+                <div class="card-buttons">
+                    <a href="https://wa.me/919795916848?text=Hi%2C%20I%20want%20to%20enquire%20about%20Small%20Appliances" target="_blank" class="mini-wa"><i class="fab fa-whatsapp"></i> Enquire</a>
+                    <button onclick="openPaymentModal()" class="mini-pay"><i class="fas fa-qrcode"></i> Pay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p class="section-subtitle">More than just a shop — we're here to help</p>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3><i class="fas fa-truck"></i> Home Delivery</h3>
+                <p>Fast and safe delivery of appliances right to your doorstep in and around Biswan.</p>
+            </div>
+            <div class="service-item">
+                <h3><i class="fas fa-tools"></i> Installation & Setup</h3>
+                <p>Professional installation for ACs, TVs, and other appliances by trained technicians.</p>
+            </div>
+            <div class="service-item">
+                <h3><i class="fas fa-wrench"></i> Repair & Maintenance</h3>
+                <p>Reliable after-sales repair services for all major electronics brands.</p>
+            </div>
+            <div class="service-item">
+                <h3><i class="fas fa-shield-alt"></i> Warranty Support</h3>
+                <p>Full assistance with brand warranty claims and replacements.</p>
+            </div>
+            <div class="service-item">
+                <h3><i class="fas fa-solar-panel"></i> Solar Consultation</h3>
+                <p>Free guidance on solar panel installation and subsidy schemes.</p>
+            </div>
+            <div class="service-item">
+                <h3><i class="fas fa-mobile-alt"></i> UPI Payment</h3>
+                <p>Pay instantly via UPI — Google Pay, PhonePe, Paytm, BHIM & any UPI app.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UPI PAYMENT SECTION ===== -->
+    <section id="payment">
+        <div class="upi-section">
+            <h2><i class="fas fa-qrcode"></i> Pay Online via UPI</h2>
+            <p class="section-subtitle">Fast, secure & cashless payment — pay from any UPI app</p>
+
+            <div class="upi-card">
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Pay to <strong style="color: #ffd700;">Verma Electronics Store</strong></p>
+                <div class="upi-id-display" id="upiIdDisplay">
+                    9795916848@upi
+                    <small>Tap "Copy" to copy UPI ID</small>
+                </div>
+                <button class="upi-copy-btn" onclick="copyUPI('9795916848@upi')">
+                    <i class="fas fa-copy"></i> Copy UPI ID
+                </button>
+
+                <div class="upi-apps">
+                    <a href="upi://pay?pa=9795916848@upi&pn=Verma%20Electronics%20Store&cu=INR" class="upi-app any">
+                        <i class="fas fa-university"></i>
+                        Any UPI App
+                    </a>
+                    <a href="tez://upi/pay?pa=9795916848@upi&pn=Verma%20Electronics%20Store&cu=INR" class="upi-app gpay">
+                        <i class="fab fa-google-pay"></i>
+                        Google Pay
+                    </a>
+                    <a href="phonepe://pay?pa=9795916848@upi&pn=Verma%20Electronics%20Store&cu=INR" class="upi-app phonepe">
+                        <i class="fas fa-mobile-alt"></i>
+                        PhonePe
+                    </a>
+                    <a href="paytmmp://pay?pa=9795916848@upi&pn=Verma%20Electronics%20Store&cu=INR" class="upi-app paytm">
+                        <i class="fas fa-wallet"></i>
+                        Paytm
+                    </a>
+                    <a href="upi://pay?pa=9795916848@upi&pn=Verma%20Electronics%20Store&cu=INR" class="upi-app bhim">
+                        <i class="fas fa-rupee-sign"></i>
+                        BHIM
+                    </a>
+                </div>
+
+                <button onclick="openPaymentModal()" class="btn btn-upi" style="margin-top: 1rem;">
+                    <i class="fas fa-qrcode"></i> Show QR Code & Pay
+                </button>
+            </div>
+
+            <div class="upi-note">
+                <strong><i class="fas fa-info-circle"></i> How to Pay:</strong><br>
+                1. Copy the UPI ID <strong>9795916848@upi</strong> or scan the QR code.<br>
+                2. Open any UPI app (GPay, PhonePe, Paytm, BHIM, etc.).<br>
+                3. Enter the amount and complete the payment.<br>
+                4. Send us the payment screenshot on WhatsApp for confirmation.<br>
+                <strong style="color: #ffd700;">⚠️ Note:</strong> Always verify the name <strong>"Verma Electronics Store"</strong> before paying.
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why">
+        <h2>Why Choose Us?</h2>
+        <p class="section-subtitle">Trusted by families across Sitapur for over 25 years</p>
+        <div class="features">
+            <div class="feature">
+                <div class="icon"><i class="fas fa-certificate"></i></div>
+                <h3>Genuine Products</h3>
+                <p>100% authentic electronics from authorized brand dealers.</p>
+            </div>
+            <div class="feature">
+                <div class="icon"><i class="fas fa-rupee-sign"></i></div>
+                <h3>Best Prices</h3>
+                <p>Competitive rates with special festive discounts & offers.</p>
+            </div>
+            <div class="feature">
+                <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>UPI Payment</h3>
+                <p>Quick & secure digital payments via any UPI app.</p>
+            </div>
+            <div class="feature">
+                <div class="icon"><i class="fas fa-handshake"></i></div>
+                <h3>Trusted Since 1995</h3>
+                <p>Serving generations of happy customers in Sitapur.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section id="enquiry">
+        <h2>Send Us an Enquiry</h2>
+        <p class="section-subtitle">Fill the form below and we'll get back to you on WhatsApp</p>
+        <form class="enquiry-form" onsubmit="sendWhatsApp(event)">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Product Interested In *</label>
+                <select id="product" required>
+                    <option value="">-- Select a product --</option>
+                    <option>Television</option>
+                    <option>Refrigerator</option>
+                    <option>Air Conditioner</option>
+                    <option>Washing Machine</option>
+                    <option>Fan / Cooler</option>
+                    <option>Solar Panel</option>
+                    <option>Inverter / Battery</option>
+                    <option>Small Appliance</option>
+                    <option>Repair Service</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message / Requirement</label>
+                <textarea id="message" rows="4" placeholder="Tell us what you're looking for..."></textarea>
+            </div>
+            <button type="submit"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Answers to common questions from our customers</p>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">Do you accept UPI payments? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes! We accept UPI payments via Google Pay, PhonePe, Paytm, BHIM, and any other UPI app. Our UPI ID is <strong>9795916848@upi</strong>. You can also scan our QR code in-store.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">Do you offer home delivery? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes! We provide free home delivery within Biswan and nearby areas. For locations further away, a small delivery charge may apply. Contact us for details.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">Do you provide installation services? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Absolutely. We offer professional installation for ACs, TVs, washing machines, and other appliances. Our trained technicians ensure everything is set up correctly.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">We accept Cash, UPI (Google Pay, PhonePe, Paytm, BHIM), Debit/Credit Cards, and also offer EMI options on select products.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">Do products come with a warranty? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, all our products come with the manufacturer's standard warranty. We also help you with warranty claims if any issue arises.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">Do you repair old appliances? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, we offer repair and maintenance services for TVs, refrigerators, ACs, washing machines, and other electronics — even if you didn't buy them from us.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">Can I get a discount on bulk purchases? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, we offer special pricing for bulk orders, businesses, and institutional purchases. Call or WhatsApp us for a custom quote.</div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Visit Our Store</h2>
+        <p class="section-subtitle">We'd love to help you find the perfect appliance</p>
+        <div class="contact-wrapper">
+            <div class="contact-info-box">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Address</strong>
+                        Dharampur, Post Maharaj Nagar,<br>
+                        Biswan, Sitapur,<br>
+                        Uttar Pradesh, India - 261201
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Mobile</strong>
+                        <a href="tel:+919795916848">+91 97959 16848</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/919795916848" target="_blank">+91 97959 16848</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <strong>UPI ID (for payment)</strong>
+                        <a href="upi://pay?pa=9795916848@upi&pn=Verma%20Electronics%20Store&cu=INR" style="color: #ffd700; font-weight: bold;">9795916848@upi</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Opening Hours</strong>
+                        Monday – Sunday: 9:00 AM – 9:00 PM
+                    </div>
+                </div>
+                <div class="contact-buttons">
+                    <a href="tel:+919795916848" class="btn btn-call"><i class="fas fa-phone"></i> Call</a>
+                    <a href="https://wa.me/919795916848?text=Hello%20Verma%20Electronics%2C%20I%20want%20to%20enquire%20about%20a%20product." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <button onclick="openPaymentModal()" class="btn btn-upi"><i class="fas fa-qrcode"></i> Pay UPI</button>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps?q=Biswan,+Sitapur,+Uttar+Pradesh+261201&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Verma Electronics</h4>
+                <p>Your trusted electronics store in Biswan, Sitapur since 1995. Quality products, honest prices, and reliable service.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#payment">Pay Online</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Dharampur, Post Maharaj Nagar, Biswan, Sitapur, UP - 261201</p>
+                <a href="tel:+919795916848"><i class="fas fa-phone"></i> +91 97959 16848</a>
+                <a href="https://wa.me/919795916848" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                <p style="margin-top: 0.5rem;"><strong style="color: #ffd700;">UPI:</strong></p>
+                <span class="footer-upi" onclick="copyUPI('9795916848@upi')">
+                    <i class="fas fa-copy"></i> 9795916848@upi
+                </span>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/919795916848" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <span>Verma Electronics Store</span>, Biswan, Sitapur. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== UPI PAYMENT MODAL ===== -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-modal-content">
+            <button class="payment-modal-close" onclick="closePaymentModal()">&times;</button>
+            <h3><i class="fas fa-qrcode" style="color: #6739b7;"></i> Pay via UPI</h3>
+            <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Scan the QR or use the UPI ID below</p>
+
+            <div class="qr-container">
+                <img id="qrImage" src="" alt="UPI QR Code">
+            </div>
+
+            <div class="upi-id-small" id="modalUpiId">
+                9795916848@upi
+                <button class="upi-copy-btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; margin-top: 0.5rem;" onclick="copyUPI('9795916848@upi')">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+                <label style="font-size: 0.9rem; color: #666; display: block; margin-bottom: 0.3rem;">Amount (optional)</label>
+                <input type="number" id="payAmount" class="amount-input" placeholder="Enter amount ₹" min="1">
+            </div>
+
+            <div class="pay-btn-row">
+                <a href="#" id="openUpiAppBtn" class="pay-open-app" onclick="openUpiApp(event)">
+                    <i class="fas fa-external-link-alt"></i> Open UPI App
+                </a>
+                <button class="pay-copy" onclick="copyUPI('9795916848@upi')">
+                    <i class="fas fa-copy"></i> Copy UPI ID
+                </button>
+            </div>
+
+            <p class="payment-footer-note">
+                <i class="fas fa-shield-alt"></i> Verify the payee name shows <strong>"Verma Electronics Store"</strong> before completing payment. After paying, please share the screenshot on WhatsApp.
+            </p>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i> <span id="toastMsg">UPI ID copied!</span>
+    </div>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/919795916848?text=Hello%20Verma%20Electronics%2C%20I%20want%20to%20enquire%20about%20a%20product." class="float-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="float-upi" onclick="openPaymentModal()" title="Pay via UPI">
+        <i class="fas fa-qrcode"></i>
+    </button>
+    <a href="tel:+919795916848" class="float-call" title="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+        const UPI_ID = '9795916848@upi';
+        const PAYEE_NAME = 'Verma Electronics Store';
+
+        // ===== FAQ Toggle =====
+        function toggleFAQ(el) {
+            el.classList.toggle('active');
+        }
+
+        // ===== Enquiry Form -> WhatsApp =====
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const product = document.getElementById('product').value;
+            const message = document.getElementById('message').value;
+
+            const text = `*New Enquiry from Website*%0A%0A` +
+                         `*Name:* ${encodeURIComponent(name)}%0A` +
+                         `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                         `*Product:* ${encodeURIComponent(product)}%0A` +
+                         `*Message:* ${encodeURIComponent(message)}`;
+
+            window.open(`https://wa.me/919795916848?text=${text}`, '_blank');
+        }
+
+        // ===== Copy UPI ID =====
+        function copyUPI(upiId) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(upiId).then(() => {
+                    showToast('UPI ID copied: ' + upiId);
+                }).catch(() => {
+                    fallbackCopy(upiId);
+                });
+            } else {
+                fallbackCopy(upiId);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('UPI ID copied: ' + text);
+            } catch (err) {
+                showToast('Could not copy. Please copy manually: ' + text);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ===== Toast Notification =====
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        // ===== Generate UPI QR Code =====
+        function generateQRCode(amount) {
+            let upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(PAYEE_NAME)}&cu=INR`;
+            if (amount && amount > 0) {
+                upiUrl += `&am=${amount}`;
+            }
+            // Use Google Chart API for QR code (works without any library)
+            const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiUrl)}`;
+            document.getElementById('qrImage').src = qrApiUrl;
+            return upiUrl;
+        }
+
+        // ===== Payment Modal =====
+        function openPaymentModal() {
+            const modal = document.getElementById('paymentModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            generateQRCode(0);
+            // Set up the "Open UPI App" link
+            const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(PAYEE_NAME)}&cu=INR`;
+            document.getElementById('openUpiAppBtn').href = upiUrl;
+        }
+
+        function closePaymentModal() {
+            const modal = document.getElementById('paymentModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on outside click
+        document.getElementById('paymentModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePaymentModal();
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePaymentModal();
+            }
+        });
+
+        // Amount input -> regenerate QR
+        document.getElementById('payAmount').addEventListener('input', function() {
+            const amount = parseFloat(this.value) || 0;
+            generateQRCode(amount);
+        });
+
+        // Open UPI app with amount
+        function openUpiApp(e) {
+            e.preventDefault();
+            const amount = document.getElementById('payAmount').value;
+            let upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(PAYEE_NAME)}&cu=INR`;
+            if (amount && amount > 0) {
+                upiUrl += `&am=${amount}`;
+            }
+            window.location.href = upiUrl;
+        }
+
+        // Close mobile menu on link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
